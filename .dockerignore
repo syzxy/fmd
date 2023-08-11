@@ -1,0 +1,9 @@
+.next
+node_module
+db-data
+.eslintrc.json
+.eslintrc
+LICENSE
+next-env.d.ts
+README.md
+.env.example
