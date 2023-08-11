@@ -7,7 +7,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "docker-compose up",
+    "rebuild-image": "docker build -t fmd-app:latest . && docker-compose up",
+    "migrate:make": "npx knex migrate:make -x ts",
+    "migrate:up": "npx knex migrate:up",
+    "migrate:down": "npx knex migrate:down",
+
+    "dev:local": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,11 +25,16 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "knex": "^2.5.1",
     "next": "13.4.12",
+    "pg": "^8.11.2",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
   }
 }
