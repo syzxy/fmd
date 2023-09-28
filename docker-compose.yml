@@ -15,7 +15,7 @@ services:
     ports:
       - ${APP_PORT}:3000
     volumes:
-      - ./src/app:/app/app
+      - .:/app
 
   db:
     image: postgres
@@ -31,7 +31,8 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     healthcheck:
-      test: [ "CMD", "pg_isready", "-d", "${POSTGRES_DB}", "-U", "${POSTGRES_USER}" ]
+      test:
+        ["CMD", "pg_isready", "-d", "${POSTGRES_DB}", "-U", "${POSTGRES_USER}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -48,4 +49,3 @@ services:
 
 volumes:
   db-data:
-  
