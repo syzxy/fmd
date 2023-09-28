@@ -8,11 +8,11 @@
   "private": true,
   "scripts": {
     "dev": "docker-compose up",
+    "devDown": "docker-compose down",
     "rebuild-image": "docker build -t fmd-app:latest . && docker-compose up",
     "migrate:make": "npx knex migrate:make -x ts",
     "migrate:up": "npx knex migrate:up",
     "migrate:down": "npx knex migrate:down",
-
     "dev:local": "next dev",
     "build": "next build",
     "start": "next start",
