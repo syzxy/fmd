@@ -7,9 +7,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "docker-compose up",
+    "dev": "docker build -t fmd-app:latest . && docker-compose up --remove-orphans",
     "devDown": "docker-compose down",
-    "rebuild-image": "docker build -t fmd-app:latest . && docker-compose up",
     "migrate:make": "npx knex migrate:make -x ts",
     "migrate:up": "npx knex migrate:up",
     "migrate:down": "npx knex migrate:down",
