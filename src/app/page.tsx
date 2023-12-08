@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main>
-      <h1>Flyweight MD</h1>
-    </main>
+    <div className="mx-auto max-w-4xl">
+      <h1>Doc 1</h1>
+    </div>
   );
 }
