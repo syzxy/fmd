@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getNote } from '@/app/api/notes';
+import { NoteEditor } from '@/app/ui/editor';
 
 interface PageProps {
   params: {
@@ -18,7 +19,7 @@ export default async function Page({ params }: PageProps) {
     <article className="prose mx-auto dark:prose-invert">
       <h1 className="capitalize">{page.title}</h1>
       <hr />
-      <div>{page.content}</div>
+      <NoteEditor content={page.content} />
     </article>
   );
 }

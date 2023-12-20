@@ -1,7 +1,9 @@
+import { NoteEditor } from './ui/editor';
+
 export default function Home() {
   return (
     <div className="mx-auto max-w-4xl">
-      <h1>Doc 1</h1>
+      <NoteEditor className="prose lg:prose-xl" />
     </div>
   );
 }

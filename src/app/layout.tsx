@@ -10,11 +10,7 @@ export const metadata: Metadata = {
   description: 'A minimalistic yet battery included markdown editor.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body
@@ -22,9 +18,7 @@ export default function RootLayout({
       >
         <div className="flex min-h-screen">
           <Explorer />
-          <main className="mx-auto max-w-7xl flex-1 px-4 py-8 ">
-            {children}
-          </main>
+          <main className="mx-auto max-w-7xl flex-1 px-4 py-8">{children}</main>
         </div>
       </body>
     </html>
