@@ -1,4 +1,5 @@
 .next
+temp/
 node_module
 db-data
 .eslintrc.json
