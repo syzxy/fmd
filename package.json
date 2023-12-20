@@ -7,9 +7,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "docker-compose up",
+    "dev": "docker build -t fmd-app:latest . && docker-compose up --remove-orphans",
     "devDown": "docker-compose down",
-    "rebuild-image": "docker build -t fmd-app:latest . && docker-compose up",
     "migrate:make": "npx knex migrate:make -x ts",
     "migrate:up": "npx knex migrate:up",
     "migrate:down": "npx knex migrate:down",
@@ -19,6 +18,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "20.4.8",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
@@ -36,6 +36,8 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.9"
   }
 }
