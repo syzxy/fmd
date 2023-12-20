@@ -7,12 +7,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "docker build -t fmd-app:latest . && docker-compose up --remove-orphans",
-    "devDown": "docker-compose down",
-    "migrate:make": "npx knex migrate:make -x ts",
-    "migrate:up": "npx knex migrate:up",
-    "migrate:down": "npx knex migrate:down",
-    "dev:local": "next dev",
+    "db": "docker-compose up",
+    "db:down": "docker-compose down",
+    "dbMigrate:make": "npx knex migrate:make -x ts",
+    "dbMigrate:up": "npx knex migrate:up",
+    "dbMigrate:down": "npx knex migrate:down",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
