@@ -1,4 +1,4 @@
-import { NoteEditor } from './ui/editor';
+import { NoteEditor } from './ui/editor/editor';
 
 export default function Home() {
   return (

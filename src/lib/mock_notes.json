@@ -2,16 +2,779 @@
   {
     "id": "1",
     "title": "Document 1",
-    "content": "# Document 1\n\n## Introduction\n\nWelcome to this random Markdown document! This document showcases various features of Markdown using the CommonMark specification.\n\n## Text Formatting\n\n### Emphasis\n\n*This text* is italicized, and **this text** is bold, and ~this text~ is crossed.\n\n### Lists\n\n1. First item\n2. Second item\n   - Subitem 1\n   - Subitem 2\n3. Third item\n\n### Todo Lists\n\n- [x] First item\n- [ ] Second item\n- [ ] Third item\n\n### Links\n\nCheck out [CommonMark](https://commonmark.org/) for more information.\n\n## Code\n\nInline code: `printf(\"Hello, Markdown!\");`\n\nCode block:\n\n```python\ndef greet(name):\n    print(f\"Hello, {name}!\")\n```\n\n### Block Quotes\n\n> This is a blockquote. You can use it to highlight important information.\n\n## Image\n\n![Random Image](https://placekitten.com/300/200)\n"
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Document 1"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Introduction"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Welcome to this random Markdown document! This document showcases various features of Markdown using the CommonMark specification."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Text Formatting"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Emphasis"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "This text"
+            },
+            {
+              "type": "text",
+              "text": " is italicized, and "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "this text"
+            },
+            {
+              "type": "text",
+              "text": " is bold, and "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "strike"
+                }
+              ],
+              "text": "this text"
+            },
+            {
+              "type": "text",
+              "text": " is crossed."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Lists"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "First item"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Second item"
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Subitem 1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Subitem 2"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Third item"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Todo Lists"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "[x] First item"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "[ ] Second item"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Links"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Check out "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://commonmark.org/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer nofollow",
+                    "class": null,
+                    "title": null
+                  }
+                }
+              ],
+              "text": "CommonMark"
+            },
+            {
+              "type": "text",
+              "text": " for more information."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Code"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Inline code: "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ],
+              "text": "printf(\\\"Hello, Markdown!\\\");"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Code block:"
+            }
+          ]
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {
+            "language": "python"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "def greet(name):\n    print(f\\\"Hello, {name}!\\\")"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Block Quotes"
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "This is a blockquote. You can use it to highlight important information."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Image"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "![Random Image](https://placekitten.com/300/200)"
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "id": "2",
     "title": "Document 2",
-    "content": "# Document 2\n\n## Introduction\n\nWelcome to this random Markdown document! This document showcases various features of Markdown using the CommonMark specification.\n\n## Text Formatting\n\n### Emphasis\n\n*This text* is italicized, and **this text** is bold, and ~this text~ is crossed.\n\n### Lists\n\n1. First item\n2. Second item\n   - Subitem 1\n   - Subitem 2\n3. Third item\n\n### Todo Lists\n\n- [x] First item\n- [ ] Second item\n- [ ] Third item\n\n### Links\n\nCheck out [CommonMark](https://commonmark.org/) for more information.\n\n## Code\n\nInline code: `printf(\"Hello, Markdown!\");`\n\nCode block:\n\n```python\ndef greet(name):\n    print(f\"Hello, {name}!\")\n```\n\n### Block Quotes\n\n> This is a blockquote. You can use it to highlight important information.\n\n## Image\n\n![Random Image](https://placekitten.com/300/200)\n"
-  },
-  {
-    "id": "3",
-    "title": "Document 3",
-    "content": "# Document 3\n\n## Introduction\n\nWelcome to this random Markdown document! This document showcases various features of Markdown using the CommonMark specification.\n\n## Text Formatting\n\n### Emphasis\n\n*This text* is italicized, and **this text** is bold, and ~this text~ is crossed.\n\n### Lists\n\n1. First item\n2. Second item\n   - Subitem 1\n   - Subitem 2\n3. Third item\n\n### Todo Lists\n\n- [x] First item\n- [ ] Second item\n- [ ] Third item\n\n### Links\n\nCheck out [CommonMark](https://commonmark.org/) for more information.\n\n## Code\n\nInline code: `printf(\"Hello, Markdown!\");`\n\nCode block:\n\n```python\ndef greet(name):\n    print(f\"Hello, {name}!\")\n```\n\n### Block Quotes\n\n> This is a blockquote. You can use it to highlight important information.\n\n## Image\n\n![Random Image](https://placekitten.com/300/200)\n"
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Document 1"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Introduction"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Welcome to this random Markdown document! This document showcases various features of Markdown using the CommonMark specification."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Text Formatting"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Emphasis"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "This text"
+            },
+            {
+              "type": "text",
+              "text": " is italicized, and "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "this text"
+            },
+            {
+              "type": "text",
+              "text": " is bold, and "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "strike"
+                }
+              ],
+              "text": "this text"
+            },
+            {
+              "type": "text",
+              "text": " is crossed."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Lists"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "First item"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Second item"
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Subitem 1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Subitem 2"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Third item"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Todo Lists"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "[x] First item"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "[ ] Second item"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Links"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Check out "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://commonmark.org/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer nofollow",
+                    "class": null,
+                    "title": null
+                  }
+                }
+              ],
+              "text": "CommonMark"
+            },
+            {
+              "type": "text",
+              "text": " for more information."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Code"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Inline code: "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ],
+              "text": "printf(\\\"Hello, Markdown!\\\");"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Code block:"
+            }
+          ]
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {
+            "language": "python"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "def greet(name):\n    print(f\\\"Hello, {name}!\\\")"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Block Quotes"
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "This is a blockquote. You can use it to highlight important information."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Image"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "![Random Image](https://placekitten.com/300/200)"
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
